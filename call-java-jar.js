@@ -12,5 +12,5 @@ dependencies.forEach(function(dependency){
 
 var DMLScript = java.import('org.apache.sysds.api.DMLScript');
 var javaLangSystem = java.import('java.lang.System');
-// DMLScript.execute();
+console.log(DMLScript.executeScript);
 javaLangSystem.out.printlnSync('Hello World');
