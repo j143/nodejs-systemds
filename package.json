@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-sample",
+  "version": "1.0.0",
+  "description": "call java jar with node app",
+  "main": "app.js",
+  "dependencies": {
+    "java": "^0.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j143/nodejs-sample.git"
+  },
+  "keywords": [
+    "java"
+  ],
+  "author": "Janardhan Pulivarthi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j143/nodejs-sample/issues"
+  },
+  "homepage": "https://github.com/j143/nodejs-sample#readme"
+}
