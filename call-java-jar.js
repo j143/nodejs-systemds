@@ -12,5 +12,17 @@ dependencies.forEach(function(dependency){
 
 var DMLScript = java.import('org.apache.sysds.api.DMLScript');
 var javaLangSystem = java.import('java.lang.System');
-console.log(DMLScript.executeScript);
+console.log(DMLScript.executeScript());
 javaLangSystem.out.printlnSync('Hello World');
+
+MLScript = java.import('org.apache.sysds.api.mlcontext.Script');
+ml = new MLScript();
+var testscript = `
+  source("scripts/nn/layers/relu.dml") as relu;
+  X = rand(rows=100, cols=10, min=-1, max=1);
+  R1 = relu::forward(X);
+  R2 = max(X, 0);
+  R = sum(R1==R2);
+  `;
+
+console.log(ml.execute(dml(testscript)));
